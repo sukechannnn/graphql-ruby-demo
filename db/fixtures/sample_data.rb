@@ -19,8 +19,8 @@ user3 = users.third
 
 Address.seed(
   user_id: user1.id,
+  postal_code: 1_000_014,
   address: '東京都千代田区永田町１丁目７−１',
-  phone_number: '03-5521-7445',
 )
 
 posts = Post.seed(

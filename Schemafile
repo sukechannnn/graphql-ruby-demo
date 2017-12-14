@@ -3,7 +3,7 @@
 create_table "addresses", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
   t.uuid "user_id", null: false
   t.string "address", null: false
-  t.string "phone_number", null: false
+  t.integer "postal_code", null: false
   t.datetime "created_at", null: false
   t.datetime "updated_at", null: false
   t.index ["user_id"], name: "index_addresses_on_user_id", unique: true
