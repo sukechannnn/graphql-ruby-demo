@@ -1,0 +1,134 @@
+AllCops:
+  TargetRubyVersion: 2.4
+
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/schema.rb'
+    - 'config/**/*'
+    - 'bin/*'
+    - 'tmp/**/*'
+    # rspec が書き出しているファイルなので無視
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    # annotate が書き出したファイル
+    - 'lib/tasks/auto_annotate_models.rake'
+  DisplayCopNames: true
+
+Rails:
+  Enabled: true
+
+# 標準出力に出力するなというもの
+# db:seedは仕方ない気がする
+Rails/Output:
+  Exclude:
+    - 'db/seeds/demo.rb'
+    - 'db/seeds/development.rb'
+    - 'db/seeds/production.rb'
+    - 'db/seeds/staging.rb'
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - 'spec/**/*'
+
+# .の位置指定、テストの.to hogehogeも見られてしまう
+Layout/DotPosition:
+  Enabled: false
+
+##################### Style ##################################
+
+# 文字列はバッククォートかシングルクォートか
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+# ハッシュの末尾カンマをどうするか
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+# メソッド引数の末尾カンマをどうするか
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
+
+# 日本語コメントを許可する
+Style/AsciiComments:
+  Enabled: false
+
+# `# -*- frozen_string_literal: true -*-`的なコメントが無いよというエラー
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# 桁数の大きい整数を_で区切るかどうか
+Style/NumericLiterals:
+  MinDigits: 7
+  Strict: true
+
+# クラスの頭にドキュメンテーションコメントがあるかのチェック
+# falseで任意に
+Style/Documentation:
+  Enabled: false
+
+Style/ClassCheck:
+  EnforcedStyle: kind_of?
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+# 書式付き文字列の指定、パーセント指定にした
+Style/FormatString:
+  EnforcedStyle: percent
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/LambdaCall:
+  EnforcedStyle: braces
+
+Style/GuardClause:
+  MinBodyLength: 5
+
+##################### Metrics ##################################
+
+Metrics/AbcSize:
+  # The ABC size is a calculated magnitude, so this number can be a Fixnum or
+  # a Float.
+  Max: 20
+
+Metrics/BlockNesting:
+  Max: 3
+
+Metrics/ClassLength:
+  CountComments: false  # count full line comments?
+  Max: 200
+
+Metrics/ModuleLength:
+  CountComments: false  # count full line comments?
+  Max: 200
+
+# Avoid complex methods.
+Metrics/CyclomaticComplexity:
+  Max: 6
+
+Metrics/LineLength:
+  Max: 123
+  # To make it possible to copy or click on URIs in the code, we allow lines
+  # contaning a URI to be longer than Max.
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+
+Metrics/MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 23
+
+Metrics/ParameterLists:
+  Max: 6
+  CountKeywordArgs: true
+
+Metrics/PerceivedComplexity:
+  Max: 7
+
+# rspec & graphql block are large because they need to write logic in the block
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'app/graphql/**/*'
