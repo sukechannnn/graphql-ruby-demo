@@ -146,6 +146,9 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.9.0)
+    seed-fu (2.3.7)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-commands-rspec (1.0.4)
@@ -182,6 +185,7 @@ DEPENDENCIES
   ridgepole-rails
   rspec-rails (~> 3.5)
   rubocop (~> 0.49.0)
+  seed-fu (~> 2.3)
   spring
   spring-commands-rspec
 
