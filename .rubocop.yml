@@ -35,6 +35,8 @@ Layout/DotPosition:
   Enabled: false
 
 ##################### Style ##################################
+Style/BracesAroundHashParameters:
+  Enabled: false
 
 # 文字列はバッククォートかシングルクォートか
 Style/StringLiterals:
