@@ -19,7 +19,7 @@ user3 = users.third
 
 Address.seed(
   user_id: user1.id,
-  postal_code: 1000014,
+  postal_code: 1_000_014,
   address: '東京都千代田区永田町１丁目７−１',
 )
 
