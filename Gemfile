@@ -7,10 +7,13 @@ end
 
 gem 'rails', '~> 5.1.4'
 
+gem 'coffee-rails'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'ridgepole'
 gem 'ridgepole-rails'
+gem 'sass-rails'
+gem 'uglifier'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
