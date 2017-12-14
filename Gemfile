@@ -27,7 +27,9 @@ end
 
 group :development do
   gem 'annotate'
+  gem 'graphiql-rails'
   gem 'seed-fu', '~> 2.3'
+  gem 'graphiql-rails'
 end
 
 group :test do
