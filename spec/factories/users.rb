@@ -9,7 +9,9 @@
 #  email      :string           not null
 #
 
-require 'rails_helper'
-
-RSpec.describe User, type: :model do
+FactoryBot.define do
+  factory :user do
+    name '花太郎'
+    email 'hanatarou@mail.com'
+  end
 end
