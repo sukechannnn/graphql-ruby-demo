@@ -116,3 +116,6 @@ build-iPhoneSimulator/
 # Gemfile.lock
 # .ruby-version
 # .ruby-gemset
+
+## GraphQL Schema
+**/schema.json
