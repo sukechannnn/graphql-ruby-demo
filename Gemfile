@@ -8,7 +8,7 @@ end
 gem 'rails', '5.2.3'
 
 gem 'coffee-rails'
-gem 'graphql', '~> 1.7.0'
+gem 'graphql', '~> 1.8.0'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'ridgepole'

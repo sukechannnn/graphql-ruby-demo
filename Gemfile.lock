@@ -73,7 +73,7 @@ GEM
       activesupport (>= 4.2.0)
     graphiql-rails (1.4.8)
       rails
-    graphql (1.7.7)
+    graphql (1.8.17)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     loofah (2.2.3)
@@ -215,7 +215,7 @@ DEPENDENCIES
   coffee-rails
   factory_bot_rails
   graphiql-rails
-  graphql (~> 1.7.0)
+  graphql (~> 1.8.0)
   pg (~> 0.18)
   pry-byebug
   pry-rails
